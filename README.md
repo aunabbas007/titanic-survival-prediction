@@ -1,40 +1,35 @@
-# 🚢 Titanic Survival Prediction — Logistic Regression
+# Titanic Survival Prediction — Logistic Regression
 
-Predicting whether a passenger survived the Titanic using Logistic Regression.
-Part of my AI/ML Engineer journey.
+A binary-classification project using the Kaggle Titanic passenger dataset to explore preprocessing, feature encoding, scaling, and interpretable baseline modeling.
 
-## 📊 Dataset
-- 891 passengers, 12 features
-- Source: Kaggle Titanic Dataset
+## Dataset
+- Source: Kaggle Titanic dataset
+- The project README records 891 passenger rows and 12 original features.
 
-## 🧹 Data Preprocessing
-- Filled missing Age values with median
-- Dropped Cabin (77% missing), Name, Ticket, PassengerId
-- Encoded Sex as 0/1
-- One-hot encoded Embarked column
-- Scaled features using StandardScaler
+## Preprocessing documented
+- Impute missing Age values with the median.
+- Drop Cabin because of extensive missingness, along with Name, Ticket, and PassengerId.
+- Encode Sex and one-hot encode Embarked.
+- Standardize model inputs with StandardScaler.
 
-## 📈 Visualizations
-- Survival count
-- Survival by gender
-- Survival by passenger class
-- Age vs survival distribution
-- Feature importance (coefficients)
+## Model
+- Logistic Regression
+- 80/20 train-test split
+- Reported accuracy: approximately 80%
 
-## 🤖 Model
-- Algorithm: Logistic Regression
-- Train/Test split: 80/20
-- Accuracy: ~80%
+Accuracy depends on the split and preprocessing choices. For a stronger evaluation, add a fixed random seed, stratification, cross-validation, and class-wise precision/recall.
 
-## 🛠️ Tech Stack
-- Python, Pandas, NumPy
-- Scikit-learn
-- Matplotlib, Seaborn
-
-## ▶️ How to Run
+## Run
+```bash
 pip install -r requirements.txt
 python model.py
+```
 
-## 📌 Future Improvements
-- Try Random Forest and compare accuracy
-- Add cross validation
+## Stack
+Python · Pandas · NumPy · scikit-learn · Matplotlib · Seaborn
+
+## Learning focus
+Binary classification, missing-value handling, categorical encoding, feature scaling, model coefficients, and evaluation.
+
+## Author
+[Aun Abbas](https://github.com/aunabbas007)
